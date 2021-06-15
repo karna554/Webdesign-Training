@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Login In</title>
+    <script>
+        function clearText() {
+            
+           
+           var inputTextRef= document.getElementById('name')
+           var inputValue=inputTextRef.value
+           console.log(inputValue)
+           document.getElementById('name').value ="";
+           var inputLastRef=document.getElementById('last')
+           var inputLastvalue=inputLastRef.value
+           console.log(inputLastvalue)
+           document.getElementById('last').value ="";
+           var inputEmailRef =document.getElementById('mail')
+           var inputEmailvalue=inputEmailRef.value
+           console.log(inputEmailvalue)
+           document.getElementById('mail').value ="";
+           var inputPasswordRef=document.getElementById('password')
+           var inputPassword=inputPasswordRef.value
+           console.log(inputPassword)
+           document.getElementById('password').value ="";
+        }
+        
+    </script>
+    </head>
+    <body>
+        <div style="text-align: center; margin:8% auto;">
+            <h2 >Sign Up Now</h2>
+            <div>
+                <input id="name" type="text" placeholder="First Name">
+            </div>
+            <div style="padding-top: 10px;">
+                <input id="last" type="text" placeholder="Last Name">
+            </div>
+            <div style="padding-top: 10px;">
+                <input id="mail" type="text" placeholder="Email">
+            </div>
+            <div style="padding-top: 10px;">
+                <input id="password" type="password" placeholder="Password">
+            </div>
+            <div style="padding-top: 10px;"  onclick="clearText()" >
+                <input type="button" value="Login In"    >
+            </div>
+
+        </div>
+        </body>
+    </html>
