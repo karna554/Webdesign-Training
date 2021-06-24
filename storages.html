@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .storages{
+                text-align: center;
+                margin: 8% auto;
+            }
+            .storages h3 {
+                font-size: 18px;
+                color: royalblue;
+            }
+        </style>
+        <script>
+            function storeData() {
+                sessionStorage.setItem('name','Karna')
+                sessionStorage.setItem('city','Kurnool')
+                sessionStorage.setItem('state','Andhrapradesh')
+               
+            }
+            function getData() {
+            var name=    sessionStorage.getItem('name')
+             var city=   sessionStorage.getItem('city')
+             var state = sessionStorage.getItem('state')
+              
+                console.log(name)
+                console.log(city)
+                console.log(state)
+                
+            }
+            function updateData() {
+                sessionStorage.setItem('name','Arun')
+                sessionStorage.setItem('city','Madurai')
+                sessionStorage.setItem('state','TamilNadu')
+            }
+            function fnStoreData() {
+                localStorage.setItem('village','Owk')
+                localStorage.setItem('city','Kurnool')
+                localStorage.setItem('state','Andhrapradesh')
+                localStorage.setItem('college','Pullareddy Engineer College')
+               
+            }
+            function fnGetData() {
+            var village=    localStorage.getItem('village')
+             var city=   localStorage.getItem('city')
+             var state = localStorage.getItem('state')
+             var college=localStorage.getItem('college')
+              
+                console.log(village)
+                console.log(city)
+                console.log(state)
+                console.log(college)
+                
+            }
+            function fnUpdateData() {
+                localStorage.setItem('village','Krishnankoil')
+                localStorage.setItem('city','Madurai')
+                localStorage.setItem('state','TamilNadu')
+                localStorage.setItem('college','Kalasalingam University')
+            }
+        </script>
+
+    </head>
+    <body>
+         
+            <h2 style="text-align: center; text-decoration: underline;">Storages<h2>
+                
+                
+                <div class="storages">
+                    <h3>Session Storages</h3>
+                    <button onclick="storeData()">Store Data</button>
+                    <button onclick="getData()">Get Data</button>
+                    <button onclick="updateData()">Update Data</button>
+                    <hr>
+                    <h3>Local Storages</h3>
+                    <button onclick="fnStoreData()">Store Data</button>
+                    <button onclick="fnGetData()">Get Data</button>
+                    <button onclick="fnUpdateData()">Update Data</button>
+
+                
+        </div>
+    </body>
+</html>
