@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Closures</title>
+        <style>
+            div button {
+                color: red;
+                background-color: black;
+            }
+        </style>
+        <script>
+            function onClick(){
+                var count = 0
+                return function() {
+                    count = count + 1
+                    console.log(`Clicked Me ${count} Times`)
+                }
+            }
+            function fnDontClick() {
+
+            }
+            var innerFunc = onClick()
+        </script>
+
+    </head>
+    <div style="text-align: center; margin: 8% auto;">
+        <h2 style="color: royalblue;">Function Closures</h2>
+        <button onclick="innerFunc()">Click Me</button>
+        <button onclick="fnDontClick()">Don't Click Me</button>
+    
+    </div>
+</html>
