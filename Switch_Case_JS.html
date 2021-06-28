@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Switch Case</title>
+    </head>
+    <body>
+        <div style="text-align: center; margin: 15% auto;" onclick="fnStatus(event)">
+        <h3 id="head"></h3>
+        <button id="GM">Good Morning</button>
+        <button id="GA">Good Afternoon</button>
+        <button id="GE">Good Evening</button>
+        <button id="GN">Good Night</button>
+        <script>
+             function fnStatus(event) {
+                 var h3Ref = document.getElementById('head')
+                 switch(event.target.id) {
+
+                    case "GM":
+                        h3Ref.innerHTML = "Good Morning Karna!"
+                        h3Ref.style.color = "RoyalBlue"
+                        break;
+                        case "GA":
+                        h3Ref.innerHTML = "Good Afternoon Karna!"
+                        h3Ref.style.color = "Red"
+                        break;
+
+                        case "GE":
+                        h3Ref.innerHTML = "Good Evening Karna!"
+                        h3Ref.style.color = "Gray"
+                        break;
+                        default:
+                            h3Ref.innerHTML = "Good Night Karna!"
+                            h3Ref.style.color = "Brown"
+                            break;
+                 }
+             }
+        </script>
+        
+        
+        </div>
+    </body>
+</html>
